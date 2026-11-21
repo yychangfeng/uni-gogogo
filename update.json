@@ -1,14 +1,14 @@
 {
-  "versionCode": 12,
-  "versionName": "1.11",
-  "notes": "1. 抽屉新增「检查更新」，有新版本可直接在 App 里下载安装\n2. 安装包会校验 sha256，任一通道失败会自动换镜像\n3. 其余与 1.10 相同：课程编辑、成绩绩点、个性设置",
+  "versionCode": 13,
+  "versionName": "1.11.0-uni.01",
+  "notes": "• 改名 uni-go，换上了新图标（学士帽袋鼠）\n• 新增「准备页」：没导入课表时先选学校，会按 IP 所在省份把本校放大推荐\n• 新增「帮助」：一页式图文教程（导入课表 / 密码本 / 查成绩 / 改课 / 常见问题）\n• 新增黑龙江大学（适配中，需要校园网内的页面才能校准）\n• 课表、成绩、课程编辑、个性设置、检查更新全部保留",
   "apk": {
-    "size": 189727,
-    "sha256": "17f97e03cbebc34e539600085434a19594a964c63193f16581c16f3536b8e25d",
+    "size": 185758,
+    "sha256": "67161130f335f378b576b706ec4b5ecb102a10d625cd1bf520fe4a3adfccc7a6",
     "urls": [
-      "https://ghfast.top/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11/kb-1.11.apk",
-      "https://gh-proxy.com/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11/kb-1.11.apk",
-      "https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11/kb-1.11.apk"
+      "https://ghfast.top/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.01/kb-1.11.0-uni.01.apk",
+      "https://gh-proxy.com/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.01/kb-1.11.0-uni.01.apk",
+      "https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.01/kb-1.11.0-uni.01.apk"
     ]
   }
 }
