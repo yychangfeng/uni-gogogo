@@ -1,14 +1,18 @@
 {
-  "versionCode": 14,
-  "versionName": "1.11.0-uni.02",
-  "notes": "• 抽屉重新排布：密码本单独在最上面，教务/导入/成绩/课程编辑/切换学校归一组，个性设置单独一栏，检查更新和帮助放一起\n• 抽屉整体缩小，一屏能看全，不用再滚\n• 新增「打赏作者」：纯属自愿、为爱发电，不影响任何功能\n• 安装包改名 uni-go，图标与名称统一",
+  "versionCode": 15,
+  "versionName": "1.11.0-uni.03",
+  "notes": "• 修复「检查更新」下载失败：新增 jsDelivr / fastly / gcore / 仓库直链几条通道，APK 同时上传到仓库 apk/ 目录\n• 下载超时放宽（连接 15s、读 60s），失败时能看到每条通道的具体原因\n• 抽屉重排：密码本最上面，教务/导入/成绩/课程编辑/切换学校一组，个性设置一栏，检查更新+帮助一组，最下面「打赏作者」\n• 抽屉整体缩小，一屏看得全；安装包改名 uni-go",
   "apk": {
     "size": 259549,
-    "sha256": "e38dda80bb3c6ff5e3fc9757fba6a4fa5aa0528192efeb9567441d85a3b5a97c",
+    "sha256": "ec5c8520d6c022b550f0e59b88595597f03997edeb5cf502b22c81aa44be691a",
     "urls": [
-      "https://ghfast.top/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.02/uni-go-1.11.0-uni.02.apk",
-      "https://gh-proxy.com/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.02/uni-go-1.11.0-uni.02.apk",
-      "https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.02/uni-go-1.11.0-uni.02.apk"
+      "https://gh-proxy.com/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.03/uni-go-1.11.0-uni.03.apk",
+      "https://cdn.jsdelivr.net/gh/yychangfeng/uni-gogogo@main/apk/uni-go-1.11.0-uni.03.apk",
+      "https://fastly.jsdelivr.net/gh/yychangfeng/uni-gogogo@main/apk/uni-go-1.11.0-uni.03.apk",
+      "https://gcore.jsdelivr.net/gh/yychangfeng/uni-gogogo@main/apk/uni-go-1.11.0-uni.03.apk",
+      "https://ghfast.top/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.03/uni-go-1.11.0-uni.03.apk",
+      "https://raw.githubusercontent.com/yychangfeng/uni-gogogo/main/apk/uni-go-1.11.0-uni.03.apk",
+      "https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.03/uni-go-1.11.0-uni.03.apk"
     ]
   }
 }
