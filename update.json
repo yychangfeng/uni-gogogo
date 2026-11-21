@@ -1,0 +1,14 @@
+{
+  "versionCode": 12,
+  "versionName": "1.11",
+  "notes": "1. 抽屉新增「检查更新」，有新版本可直接在 App 里下载安装\n2. 安装包会校验 sha256，任一通道失败会自动换镜像\n3. 其余与 1.10 相同：课程编辑、成绩绩点、个性设置",
+  "apk": {
+    "size": 189727,
+    "sha256": "17f97e03cbebc34e539600085434a19594a964c63193f16581c16f3536b8e25d",
+    "urls": [
+      "https://ghfast.top/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11/kb-1.11.apk",
+      "https://gh-proxy.com/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11/kb-1.11.apk",
+      "https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11/kb-1.11.apk"
+    ]
+  }
+}
