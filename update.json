@@ -1,9 +1,14 @@
 {
   "versionCode": 14,
   "versionName": "1.11.0-uni.02",
+  "notes": "• 抽屉重新排布：密码本单独在最上面，教务/导入/成绩/课程编辑/切换学校归一组，个性设置单独一栏，检查更新和帮助放一起\n• 抽屉整体缩小，一屏能看全，不用再滚\n• 新增「打赏作者」：纯属自愿、为爱发电，不影响任何功能\n• 安装包改名 uni-go，图标与名称统一",
   "apk": {
     "size": 259549,
-    "sha256": "5a8d6b03858b9f7b47793b3802e14b93ff9a7c0f96b19114efe9972e0d8ec4b5",
-    "urls": [... releases/download/v1.11.0-uni.02/uni-go-1.11.0-uni.02.apk ...]
+    "sha256": "e38dda80bb3c6ff5e3fc9757fba6a4fa5aa0528192efeb9567441d85a3b5a97c",
+    "urls": [
+      "https://ghfast.top/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.02/uni-go-1.11.0-uni.02.apk",
+      "https://gh-proxy.com/https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.02/uni-go-1.11.0-uni.02.apk",
+      "https://github.com/yychangfeng/uni-gogogo/releases/download/v1.11.0-uni.02/uni-go-1.11.0-uni.02.apk"
+    ]
   }
 }
