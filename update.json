@@ -1,18 +1,18 @@
 {
-  "versionCode": 19,
-  "versionName": "1.11.1",
+  "versionCode": 20,
+  "versionName": "1.11.2",
   "notes": "• 改名 wit-go，图标换成深蓝学士服的黄色小狗\n• 这一版只做武汉工程大学：去掉 IP 定位、学校切换和「其他学校」输入，准备页只剩一张卡片\n• 课表格子除了课名、教室，再多一行老师（放不下时自动省略）\n• 分享图：左上角改成 App 图标，教室与老师分两行；页脚水印改名 wit-go\n• 桌面小组件修复空白卡片（RemoteViews 不支持裸 View），并加了一层兜底显示\n• 下载通道、超时沿用上一版（jsDelivr / fastly / gcore / 仓库直链）",
   "apk": {
-    "size": 329842,
-    "sha256": "a2ef689744471a3e5e01fb934ef448dc0f001753df3243b0cf1b2abdb0b874ef",
+    "size": 333938,
+    "sha256": "a0b0f2ae067b7f08bf87e49ecb16d9a717be065cb2287305de82a157ae9b06a4",
     "urls": [
-      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.1/wit-go-1.11.1.apk",
-      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.1.apk",
-      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.1.apk",
-      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.1.apk",
-      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.1/wit-go-1.11.1.apk",
-      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.1.apk",
-      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.1/wit-go-1.11.1.apk"
+      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.2/wit-go-1.11.2.apk",
+      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.2.apk",
+      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.2.apk",
+      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.2.apk",
+      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.2/wit-go-1.11.2.apk",
+      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.2.apk",
+      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.2/wit-go-1.11.2.apk"
     ]
   }
 }
