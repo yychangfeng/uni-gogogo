@@ -1,18 +1,18 @@
 {
-  "versionCode": 23,
-  "versionName": "1.11.4",
-  "notes": "• 新增「导出为文件」：课表页右上角转发图标 → 导出课表 → 导出为文件，生成 .json 数据文件，自动拉起系统分享，同时另存一份到手机「下载」目录\n• 新增「导入课表」：抽屉里（课程编辑下面），选一个 .json 就能把课表恢复过来，提醒和小组件会跟着重排\n• 导出为图片改成两步：先选「导出为图片」，再选本周 / 全部课表\n• 修复导入页点「选择文件」直接闪退的问题（桥接方法递归调用）\n• 新增崩溃记录：真闪退了，下次打开会弹「上次崩溃了」，点复制就能发我\n• 顺带修了版本号显示、导入后返回课表时的状态复位",
+  "versionCode": 24,
+  "versionName": "1.11.5",
+  "notes": "- 修复「有新版本却提示已是最新」：检查更新不再「谁先返回用谁」，改成取各通道里版本号最大的一份\n- 调整通道顺序：先试新鲜度高的（ghfast / raw / gh-proxy），jsDelivr 放最后（它对 @main 有 12 小时缓存）\n- 「已是最新」弹窗新增「打开发布页」，遇到缓存异常时可以自己去看\n- 检查更新耗时收紧：第一条成功后最多再等 2.5 秒，不会为挂掉的通道干等",
   "apk": {
     "size": 342194,
-    "sha256": "0eb5774813a4ccace7e9b0a131f42e39d5000cb84409730a08abc8b095d803f3",
+    "sha256": "135f6c2818e22a5a1b84313f7135f2b70d61cfb84e3895b557521f7d26166354",
     "urls": [
-      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.4.apk",
-      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.4.apk",
-      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.4.apk",
-      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.4/wit-go-1.11.4.apk",
-      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.4.apk",
-      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.4/wit-go-1.11.4.apk",
-      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.4/wit-go-1.11.4.apk"
+      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
+      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
+      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
+      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.5/wit-go-1.11.5.apk",
+      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.5.apk",
+      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.5/wit-go-1.11.5.apk",
+      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.5/wit-go-1.11.5.apk"
     ]
   }
 }
