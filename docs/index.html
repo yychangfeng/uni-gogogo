@@ -118,6 +118,23 @@
     transform: translateY(110%); transition: transform .24s cubic-bezier(.2,.8,.3,1);
   }
   .sheet.on { transform: translateY(0); }
+
+  /* 关于网页版 */
+  .sheet.about { max-height: 82vh; display: flex; flex-direction: column; }
+  .sheet.about .ab { overflow: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .ab p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.65; color: var(--t2); }
+  .ab .abLead { color: var(--t1); font-size: 13px; }
+  .ab h4 { margin: 14px 0 6px; font-size: 12.5px; color: #2f6fed; font-weight: 700; }
+  .ab ol, .ab ul { margin: 0 0 6px; padding-left: 18px; }
+  .ab li { font-size: 12.5px; line-height: 1.7; color: var(--t2); margin-bottom: 4px; }
+  .ab code { background: #f2f5fa; border-radius: 4px; padding: 1px 4px; font-size: 11.5px; }
+  .ab table { width: 100%; border-collapse: collapse; margin: 4px 0 6px; }
+  .ab th, .ab td { font-size: 12px; padding: 5px 4px; border-bottom: 1px solid #eef1f6; text-align: left; color: var(--t2); }
+  .ab th { color: var(--t3); font-weight: 600; font-size: 11px; }
+  .ab td:first-child { color: var(--t1); }
+  .abLink { display: block; margin: 14px 0 6px; text-align: center; font-size: 13px; font-weight: 600;
+            color: #2f6fed; text-decoration: none; background: #eef4ff; border-radius: 12px; padding: 11px; }
+  .linkBtn { margin-top: 10px; border: 0; background: transparent; color: #2f6fed; font-size: 12.5px; padding: 6px; }
   .grab { width: 38px; height: 4px; border-radius: 2px; background: #dfe4ec; margin: 0 auto 10px; }
   .shTitle { font-size: 14px; font-weight: 700; margin: 2px 0 10px; }
   .opt { width: 100%; border: 0; background: #f6f8fc; border-radius: 12px; text-align: left; padding: 12px 13px; margin-bottom: 8px; font-size: 13.5px; color: var(--t1); }
@@ -162,6 +179,47 @@
   <button class="opt" id="mImport">导入课表文件<small>从安卓版 wit-go 导出的 .json</small></button>
   <button class="opt" id="mWeek">跳到某一周<small id="mWeekSub">当前第 1 周</small></button>
   <button class="opt" id="mClear">清空课表<small>数据只在这台手机上，清空后需要重新导入</small></button>
+  <button class="opt" id="mAbout">关于网页版<small>它怎么工作、和安卓版差在哪</small></button>
+</div>
+
+<div class="sheet about" id="aboutSheet">
+  <div class="grab"></div>
+  <div class="shTitle">关于网页版</div>
+  <div class="ab">
+    <p class="abLead">这是 wit-go 的只读网页版，主要给 iPhone 用。安卓版才是完整版。</p>
+
+    <h4>它怎么工作</h4>
+    <ol>
+      <li>纯静态页面，托管在 GitHub Pages，没有服务器。</li>
+      <li>课表存在浏览器本地（localStorage），不上传任何地方。</li>
+      <li>数据来自安卓版「导出」→「导出为文件」得到的 <code>wit-go-kb-*.json</code>，传到这台设备后在这里「选文件」导入。</li>
+      <li>装到主屏幕后由 Service Worker 缓存，没网也能打开看。</li>
+    </ol>
+
+    <h4>为什么不能像安卓版那样自动导入</h4>
+    <p>安卓版是自己打开教务系统、在你登录后读屏幕上已经显示的课表。iOS 浏览器里，网页无权读取其它网站（jwxt.wit.edu.cn）的内容，也拿不到那边的登录状态——这是浏览器的跨域限制，不是没做。</p>
+    <p>所以退一步：安卓版把课表导成文件，这边读文件。</p>
+
+    <h4>和安卓版差在哪</h4>
+    <table>
+      <tr><th>功能</th><th>安卓</th><th>网页</th></tr>
+      <tr><td>看课表 / 翻周 / 课程详情</td><td>有</td><td>有</td></tr>
+      <tr><td>从教务系统导入</td><td>有</td><td>没有，只能读文件</td></tr>
+      <tr><td>上课前 10 分钟提醒</td><td>有</td><td>没有（网页弹不了定时通知）</td></tr>
+      <tr><td>桌面小组件</td><td>有</td><td>没有</td></tr>
+      <tr><td>成绩查询 / 绩点</td><td>有</td><td>没有</td></tr>
+      <tr><td>改课加课、主题、分享图片</td><td>有</td><td>没有</td></tr>
+    </table>
+
+    <h4>要注意</h4>
+    <ul>
+      <li>清浏览器数据、删图标、或长期不用被系统回收，本地课表可能没了——留一份 .json 备份。</li>
+      <li>只能用 Safari 打开再「添加到主屏幕」，微信里打开装不了。</li>
+      <li>课表是快照：教务系统改了课，要重新在安卓版导出、再导入。</li>
+    </ul>
+
+    <a class="abLink" href="https://github.com/yychangfeng/wit-go/releases/latest" target="_blank" rel="noopener">去下载安卓版 wit-go →</a>
+  </div>
 </div>
 
 <div class="sheet" id="weekSheet">
@@ -389,9 +447,12 @@
       + '<h2>先导入一份课表</h2>'
       + '<p>安卓版 wit-go 里：课表右上角「导出」→「导出为文件」，把那个 <b>.json</b> 传到这台手机，然后在这里选中它。</p>'
       + '<button class="cta" id="btnPick">选文件</button>'
+      + '<button class="linkBtn" id="btnWhy">为什么只能导入文件？</button>'
       + '</div>';
     var b = document.getElementById('btnPick');
     if (b) b.onclick = pickFile;
+    var w = document.getElementById('btnWhy');
+    if (w) w.onclick = function () { show('aboutSheet'); };
   }
 
   function bindBlocks() {
@@ -431,7 +492,7 @@
     document.getElementById('mask').classList.add('on');
   }
   function closeAll() {
-    ['menuSheet', 'weekSheet', 'detSheet'].forEach(function (i) {
+    ['menuSheet', 'weekSheet', 'detSheet', 'aboutSheet'].forEach(function (i) {
       document.getElementById(i).classList.remove('on');
     });
     document.getElementById('mask').classList.remove('on');
@@ -452,6 +513,7 @@
   /* 菜单项 */
   document.getElementById('mImport').onclick = function () { closeAll(); pickFile(); };
   document.getElementById('mWeek').onclick = function () { buildWeekGrid(); show('weekSheet'); };
+  document.getElementById('mAbout').onclick = function () { show('aboutSheet'); };
   document.getElementById('mClear').onclick = function () {
     if (!confirm('清空后会变成空白课表，确定？')) return;
     try { localStorage.removeItem(KEY); } catch (e) { }
