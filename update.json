@@ -1,10 +1,10 @@
 {
   "versionCode": 24,
   "versionName": "1.11.5",
-  "notes": "- 修复「有新版本却提示已是最新」：检查更新不再「谁先返回用谁」，改成取各通道里版本号最大的一份\n- 调整通道顺序：先试新鲜度高的（ghfast / raw / gh-proxy），jsDelivr 放最后（它对 @main 有 12 小时缓存）\n- 「已是最新」弹窗新增「打开发布页」，遇到缓存异常时可以自己去看\n- 检查更新耗时收紧：第一条成功后最多再等 2.5 秒，不会为挂掉的通道干等",
+  "notes": "- 检查更新改为多通道收集后取版本号最大的一份，不再「谁先返回用谁」\n- 版本指针不再走 jsDelivr（它对 @main 有 12 小时缓存），只走 ghfast / raw / gh-proxy / Release 附件\n- 「已是最新」弹窗新增「打开发布页」，遇到缓存异常可自行核对\n- 检查更新耗时收紧：第一条成功后最多再等 2.5 秒",
   "apk": {
     "size": 342194,
-    "sha256": "135f6c2818e22a5a1b84313f7135f2b70d61cfb84e3895b557521f7d26166354",
+    "sha256": "bb735c1d69b3f080c233c41a0a5df377eef687764c397fc269743868bef324af",
     "urls": [
       "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
       "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
