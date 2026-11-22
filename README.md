@@ -4,9 +4,9 @@
 
 ## 📲 下载安装
 
-[![下载最新版](https://img.shields.io/badge/%E7%82%B9%E6%AD%A4%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88-2f6fed?style=for-the-badge)](https://github.com/yychangfeng/wit-go/releases/latest)
+### 👉 [点这里下载最新版](https://github.com/yychangfeng/wit-go/releases/latest)
 
-打开上面的链接后，在 **Assets** 里点 `wit-go-x.y.z.apk` 下载安装即可。
+打开后点 `wit-go-x.y.z.apk` 下载安装即可。
 
 - 只装 `.apk` 那一个文件。
 - `update.json` 是 App 自动检查更新用的，`Source code` 是源码，**都不用管**。
