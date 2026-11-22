@@ -21,3 +21,9 @@
 ## 更新记录
 
 见 [Releases](https://github.com/yychangfeng/wit-go/releases)。
+
+## 🍎 iPhone / 电脑上想看课表？
+
+用浏览器打开 **https://yychangfeng.github.io/wit-go/** ，在 iPhone 的 Safari 里「分享 → 添加到主屏幕」，就是一个全屏的课表 App。
+
+网页版是只读的：数据靠安卓版「导出为文件」生成的 `.json` 导入，**没有上课提醒、没有小组件、没有成绩**（iOS 网页拿不到教务系统页面，也弹不了本地通知）。
