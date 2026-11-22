@@ -134,6 +134,7 @@
   .ab td:first-child { color: var(--t1); }
   .abLink { display: block; margin: 14px 0 6px; text-align: center; font-size: 13px; font-weight: 600;
             color: #2f6fed; text-decoration: none; background: #eef4ff; border-radius: 12px; padding: 11px; }
+  .abVer { margin: 10px 0 0; text-align: center; font-size: 11px; color: var(--t3); }
   .linkBtn { margin-top: 10px; border: 0; background: transparent; color: #2f6fed; font-size: 12.5px; padding: 6px; }
   .grab { width: 38px; height: 4px; border-radius: 2px; background: #dfe4ec; margin: 0 auto 10px; }
   .shTitle { font-size: 14px; font-weight: 700; margin: 2px 0 10px; }
@@ -219,6 +220,7 @@
     </ul>
 
     <a class="abLink" href="https://github.com/yychangfeng/wit-go/releases/latest" target="_blank" rel="noopener">去下载安卓版 wit-go →</a>
+    <p class="abVer">网页版 2026-11-22 · 兼容安卓版 1.11.4 起的导出文件</p>
   </div>
 </div>
 
@@ -294,11 +296,18 @@
   function buildPeriods(rows) {
     var out = [];
     (rows || []).forEach(function (r) {
-      var m = /(\d{1,2})\s*:\s*(\d{2})\s*-\s*(\d{1,2})\s*:\s*(\d{2})/.exec(String(r.text || r));
+      // 安卓版导出的是 { periods:[1,2], time:'08:00-09:35' }，
+      // 老解析器也可能给 { text:'第12节 08:00-09:35' }，两种都认
+      var timeStr = String((r && (r.time || r.text)) || '');
+      var m = /(\d{1,2})\s*:\s*(\d{2})\s*[-–]\s*(\d{1,2})\s*:\s*(\d{2})/.exec(timeStr);
       if (!m) return;
       var cnt = 1;
-      var pm = /第\s*([\d]+)\s*节/.exec(String(r.text || ''));
-      if (pm) cnt = pm[1].length;
+      if (r && Object.prototype.toString.call(r.periods) === '[object Array]' && r.periods.length) {
+        cnt = r.periods.length;
+      } else {
+        var pm = /第\s*([\d]+)\s*节/.exec(timeStr);
+        if (pm) cnt = pm[1].length;
+      }
       var start = +m[1] * 60 + +m[2];
       var end = +m[3] * 60 + +m[4];
       var dur = 45, gap = 5;
