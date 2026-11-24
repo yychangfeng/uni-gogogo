@@ -1,18 +1,18 @@
 {
-  "versionCode": 24,
-  "versionName": "1.11.5",
+  "versionCode": 25,
+  "versionName": "1.11.6",
   "notes": "- 检查更新改为多通道收集后取版本号最大的一份，不再「谁先返回用谁」\n- 版本指针不再走 jsDelivr（它对 @main 有 12 小时缓存），只走 ghfast / raw / gh-proxy / Release 附件\n- 「已是最新」弹窗新增「打开发布页」，遇到缓存异常可自行核对\n- 检查更新耗时收紧：第一条成功后最多再等 2.5 秒",
   "apk": {
-    "size": 342194,
-    "sha256": "bb735c1d69b3f080c233c41a0a5df377eef687764c397fc269743868bef324af",
+    "size": 346290,
+    "sha256": "f834b1e69990103c7a6960b4302d825377427d50dcc58020c03f516adc19cc36",
     "urls": [
-      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
-      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
-      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.5.apk",
-      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.5/wit-go-1.11.5.apk",
-      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.5.apk",
-      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.5/wit-go-1.11.5.apk",
-      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.5/wit-go-1.11.5.apk"
+      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.6.apk",
+      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.6.apk",
+      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.6.apk",
+      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.6/wit-go-1.11.6.apk",
+      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.6.apk",
+      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.6/wit-go-1.11.6.apk",
+      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.6/wit-go-1.11.6.apk"
     ]
   }
 }
