@@ -1,18 +1,18 @@
 {
-  "versionCode": 25,
-  "versionName": "1.11.6",
-  "notes": "- **通知不响自查**：个性设置 → 上课提醒 下面会直接写明状态（已排几条、下一次什么时候、缺哪个权限），多了一个「发一条测试提醒」按钮，5 秒后弹一条，能弹就说明系统通道是通的\n- **每天凌晨自动重排**：就算被省电策略杀掉，第二天也会把提醒重新排上；通知渠道改成开机就建\n- **锁定周次 → 开课日期**：导入时不再问「现在是第几周」，改成选「正式上课那天」（第 1 周的周一），课表、周次、提醒全部从这天往后推；选错可以随时在个性设置里改\n- **开学前也能对得上**：如果今天比开学早两周以上，最左边会单独多一页「放假中」，显示今天的日期和还有几天开学，不会再出现「第 -2 周」\n- **先不导入，直接进**：准备页多了这条入口，不导入也能先进去看看界面，之后再从抽屉补导入",
+  "versionCode": 26,
+  "versionName": "1.11.7",
+  "notes": "- **上课提醒不会再\"半夜诈尸\"了**：以前的提醒交给系统排队，手机深睡一夜，闹钟会被攒到凌晨统一送达，于是有人在半夜收到\"上课\"通知。现在每条提醒只在**上课前 12 分钟到上课那一刻**之间的窗口里才会弹，晚了就直接丢掉——宁可这一次不响，也不半夜吓人\n- **同一节课不再提醒两遍**：以前\"离开课不到 10 分钟\"会把提醒改到上课那一刻再补一条\"现在上课\"，现在直接跳过，一节课只提醒一次\n- **旧提醒不会残留**：删课、换课表、改开课日期之后，之前那些下标上的旧闹钟会一并撤掉，不会再弹出已经不存在的课\n- **提醒更不容易丢**：Android 13 以上安装即获得精确闹钟权限（不用再去系统设置里手动开）；重启手机、改系统时间 / 时区、打开 App，都会自动把提醒重新排一遍\n- **新增「立即弹一条（不走闹钟）」**：个性设置 → 上课提醒，点一下就知道通知通道本身通不通；同一条卡片上还会写明**上次实际提醒是几点、系统延迟了多久、有没有拦下过时间不对的提醒**\n- **「系统闹钟和课表对不上」不再虚报**：手机里只要有起床闹钟之类的闹钟就会误报，现在只作参考显示，不再整块标黄\n- **通知真被关掉时会说清楚**：系统通知总开关或「上课提醒」渠道被关，设置页直接标红并给一键跳转，不再一边显示\"已排 N 条\"一边一条都不响",
   "apk": {
-    "size": 346290,
-    "sha256": "eedf8aa32ebe6269c096fffce915130303b16b55676aea116d43d6f62a8d1a83",
+    "size": 350386,
+    "sha256": "d8fd7b0c4c2e5e75579603c54d6298ca4b895e53c098485597b619044b202951",
     "urls": [
-      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.6.apk",
-      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.6.apk",
-      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.6.apk",
-      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.6/wit-go-1.11.6.apk",
-      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.6.apk",
-      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.6/wit-go-1.11.6.apk",
-      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.6/wit-go-1.11.6.apk"
+      "https://cdn.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.7.apk",
+      "https://fastly.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.7.apk",
+      "https://gcore.jsdelivr.net/gh/yychangfeng/wit-go@main/apk/wit-go-1.11.7.apk",
+      "https://ghfast.top/https://github.com/yychangfeng/wit-go/releases/download/v1.11.7/wit-go-1.11.7.apk",
+      "https://raw.githubusercontent.com/yychangfeng/wit-go/main/apk/wit-go-1.11.7.apk",
+      "https://github.com/yychangfeng/wit-go/releases/download/v1.11.7/wit-go-1.11.7.apk",
+      "https://gh-proxy.com/https://github.com/yychangfeng/wit-go/releases/download/v1.11.7/wit-go-1.11.7.apk"
     ]
   }
 }
